@@ -11,7 +11,8 @@ namespace testautomation.RestApiUtilities
         private RestRequest restRequest;
         private IRestResponse restResponse;
         private string response;
-
+        /**This method will return status code for the paramter url & parameter GET request
+         */
         public void ReturnResponseCode(String url, String request)
         {
             string uri = "";
@@ -32,7 +33,8 @@ namespace testautomation.RestApiUtilities
             //Console.WriteLine(response);
             Console.WriteLine(restResponse.StatusCode);
         }
-
+        /**This method validates presence of parameter text in the response body 
+         */
         public void ValidatePresenceOfText(String text)
         {
             Console.WriteLine("****************ValidatePresenceOfText**********");
