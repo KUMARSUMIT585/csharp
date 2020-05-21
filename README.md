@@ -1,7 +1,8 @@
 # csharp
-# Project Set Up
+# Project Set Up & Executions
+
     Install Visual Studio Code 
-    git clone the project & you are good to go 
+    Git clone the project & you are good to go 
     
     Command Line Execution (currently it executes all tests in the steps folder)
     dotnet clean 
