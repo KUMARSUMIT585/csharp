@@ -1,16 +1,17 @@
 # csharp
 # Project Set Up & Executions
 
-    Install Visual Studio Code 
-    Git clone the project & you are good to go 
+    Install Visual Studio Code (please attach link)
     
+    Git clone the project https://github.com/KUMARSUMIT585/csharp
+        
     Command Line Execution (currently it executes all tests in the steps folder)
-    dotnet clean 
-    dotnet build
-    dotnet test   
+    How to clean >>>>  dotnet clean 
+    How to build >>>>  dotnet build
+    How to test  >>>>  dotnet test    (it will execute the tests present in the steps folder, or the step definitions)  
 
 # Fetaures already present 
-    Rest Api Sample Tests
+    Rest Api Sample Tests 
     Web app Sample Tests
     Specflow 
     Extent Reports (In Progress)
