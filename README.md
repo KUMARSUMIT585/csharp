@@ -1,7 +1,7 @@
 # csharp
 # Project Set Up & Executions
 
-    Install Visual Studio Code (please attach link)
+    Install Visual Studio Code (https://code.visualstudio.com/download)
     
     Git clone the project https://github.com/KUMARSUMIT585/csharp
         
