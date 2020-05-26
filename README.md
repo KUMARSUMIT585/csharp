@@ -10,7 +10,7 @@
     How to build >>>>  dotnet build
     How to test  >>>>  dotnet test    (it will execute the tests present in the steps folder, or the step definitions)  
 
-# Fetaures already present 
+# Features built so far
     Rest Api Sample Tests 
     Web app Sample Tests
     Specflow 
