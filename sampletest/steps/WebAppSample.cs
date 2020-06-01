@@ -4,34 +4,36 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
+using ReportingLibrary;
 
 namespace sampletest.steps.webtests
 {
     [Binding]
     public class WebAppSample
     {
+        ExtentReportsHelper extent1=new ExtentReportsHelper();
         IWebDriver driver = new ChromeDriver(@"C:\Users\dtdev\csharp\csharp\sampletest\Drivers"); //<-Add your path
         //extent reports code
         
         //end of extent related codes
-        [Given(@"I know the url deatils")]
+        [Given(@"I know the url details")]
         public void GivenPrecondition1()
         {
             Console.WriteLine("Fetching the URL to be launched");
             //!Make sure to add the path to where you extracting the chromedriver.exe:
             //driver.Navigate().GoToUrl("https://google.com");
-
-        }
+            extent1.CreateTest("Sample Web App Test 1");
+            extent1.SetStepStatusPass("Given I know the url details");        }
 
         [When(@"I launch the web app in G Chrome")]
         public void WhenAction1()
         {
             Console.WriteLine("Trying yo launch the web page ");
             driver.Navigate().GoToUrl("https://specflow.org/");//we need to parameterize this later
-
+            extent1.SetStepStatusPass("When I launch the web app in G Chrome");  
         }
 
-        [Then(@"I get aunched web page")]
+        [Then(@"I get launched web page")]
         public void ThenTestableOutcome1()
         {
             Console.WriteLine("Then some outcome");
@@ -45,8 +47,17 @@ namespace sampletest.steps.webtests
             else{
                 result1=false;
             }
-            Assert.IsTrue(result1,"The title of web page is :   "+title);
-            
+            //Assert.IsTrue(result1,"The title of web page is :   "+title);
+            if (result1==true)
+            {
+                extent1.SetStepStatusPass("Then I get launched web page"); 
+            }
+            else
+            {
+                extent1.SetStepStatusFail("Then I get launched web page"); 
+                extent1.SetTestStatusFail("The actual page title is not same as the expected page title");
+            }
+            extent1.Close();            
 
         }
     }

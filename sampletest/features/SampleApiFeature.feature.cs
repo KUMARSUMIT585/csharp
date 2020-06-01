@@ -100,7 +100,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 8
- testRunner.Given("I know the api deatils", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I know the api details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 9
   testRunner.When("I request get", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

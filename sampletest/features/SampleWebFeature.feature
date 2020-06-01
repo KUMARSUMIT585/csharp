@@ -5,6 +5,6 @@ Feature: Webtests
  So that reason
  
 Scenario: Webtests
- Given I know the url deatils
+ Given I know the url details
   When I launch the web app in G Chrome 
-  Then I get aunched web page
+  Then I get launched web page

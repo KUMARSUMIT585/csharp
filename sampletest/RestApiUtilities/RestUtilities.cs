@@ -15,7 +15,7 @@ namespace sampletest.RestApiUtilities
          */
         public void ReturnResponseCode(String url, String request)
         {
-            string uri = "";
+            //string uri = "";
             //sample line of code to fetch response from an API
             Console.WriteLine("****************ReturnResponseCode**********");
             Console.WriteLine("Method called- this method will return response code for an api");
@@ -32,6 +32,8 @@ namespace sampletest.RestApiUtilities
             Console.WriteLine("The output of status code is as below");
             //Console.WriteLine(response);
             Console.WriteLine(restResponse.StatusCode);
+            //Console.WriteLine(restResponse.);
+            
         }
         /**This method validates presence of parameter text in the response body 
          */
@@ -47,7 +49,8 @@ namespace sampletest.RestApiUtilities
             }
             else
             {
-                Console.WriteLine("The item searched for :'" + text + "' is NOT present in the response");
+                Console.WriteLine("The item searched for :'" + text + "' is NOT present in the response, actual response body is :");
+                //Console.WriteLine(" "+restResponse.ToString());
                 return false;
             }
 

@@ -5,6 +5,6 @@ Feature: APItests
  So that reason
  
 Scenario: APItests
- Given I know the api deatils
+ Given I know the api details
   When I request get 
   Then I get desired response
