@@ -23,6 +23,6 @@
     
     
 # Debt so far 
-    will have to solve Nuget dependency issues , tests are executing but dotnet build id failing
+    will have to solve Nuget dependency issues , tests are executing but dotnet build is failing ( probably due to dotnet framework version and dependencies )
 
 created by kumar sumit 
