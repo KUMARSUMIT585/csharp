@@ -5,7 +5,7 @@
     
     Git clone the project https://github.com/KUMARSUMIT585/csharp
     
-    Pre requisite (has to be edited further) -  dotnet core should be installed 
+    Pre requisite (has to be edited further,it is a draft version) -  dotnet core should be installed 
     To download -   https://dotnet.microsoft.com/download
     (Post installation - To verify enter in command line dotnet --vesion , output should be '3.1.101')
         
