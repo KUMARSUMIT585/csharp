@@ -14,9 +14,8 @@
         >> create a new feature file within the 'features' folder, create a corresponding step definition class in 'steps' folder & you have a new test ready .
 
 # Features built so far
-    Rest Api Sample Tests 
-    Web app Sample Tests
-    Specflow 
+    Rest Api Sample Tests + Specflow
+    Web App Sample Tests + Specflow
     Extent Reports
 
 # Extensions To Be Installed in VS Code
