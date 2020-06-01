@@ -26,10 +26,16 @@ namespace ReportingLibrary
             //reporter = new ExtentV3HtmlReporter(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Reports/ExtentReports.html"));
            
             extent = new ExtentReports();
+            //have to change the path to relative one
             reporter = new ExtentV3HtmlReporter("C:/Users/dtdev/csharp/csharp/sampletest/Reports/ExtentReports"+"_"+timestamp2+".html");
-            reporter.Config.DocumentTitle = "Sample Automation Testing Report 1";
-            reporter.Config.ReportName = "Regression Testing Suite 1";
-            reporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;//to set different themes
+            reporter.LoadConfig("C:/Users/dtdev/csharp/csharp/sampletest/Configs/extent-config.xml");
+            //below lines would have been needed in case we did not have seperate config file
+            //reporter.Config.DocumentTitle = "Sample Automation Testing Report 1";
+            //reporter.Config.ReportName = "Regression Testing Suite 1";
+            //reporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;//to set different themes
+            
+
+            //need to paramterize this below section as well
             extent.AttachReporter(reporter);
             extent.AddSystemInfo("Application Under Test", "Sample App 1");
             extent.AddSystemInfo("Environment", "QA");
