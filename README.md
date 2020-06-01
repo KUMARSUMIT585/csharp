@@ -17,11 +17,13 @@
     Rest Api Sample Tests 
     Web app Sample Tests
     Specflow 
-    Extent Reports (In Progress)
-
+    Extent Reports
 
 # Extensions To Be Installed in VS Code
     will update this section on consistent basis
-
+    
+    
+# Debt so far 
+    will have to solve Nuget dependency issues , tests are executing but dotnet build id failing
 
 created by kumar sumit 
