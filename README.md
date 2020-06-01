@@ -4,6 +4,10 @@
     Install Visual Studio Code (https://code.visualstudio.com/download)
     
     Git clone the project https://github.com/KUMARSUMIT585/csharp
+    
+    Pre requisite (has to be edited further) -  dotnet core should be installed 
+    To download -   https://dotnet.microsoft.com/download
+    (Post installation - To verify enter in command line dotnet --vesion , output should be '3.1.101')
         
     Command Line Execution (currently it executes all tests in the steps folder)
     How to clean >>>>  dotnet clean 
