@@ -22,6 +22,9 @@
     Web App Sample Test + Specflow
     Extent Reports
 
+# Dependencies 
+    chromedriver version will depedn on the chrome versio on local machine
+
 # Extensions To Be Installed in VS Code
     will update this section on consistent basis
     

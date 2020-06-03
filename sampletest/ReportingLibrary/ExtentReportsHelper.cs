@@ -3,6 +3,7 @@ using AventStack.ExtentReports.Reporter;
 using System;
 using System.IO;
 using System.Reflection;
+using System.Configuration;
 namespace ReportingLibrary
 {
     public class ExtentReportsHelper
@@ -27,8 +28,13 @@ namespace ReportingLibrary
            
             extent = new ExtentReports();
             //have to change the path to relative one
-            reporter = new ExtentV3HtmlReporter("C:/Users/dtdev/csharp/csharp/sampletest/Reports/ExtentReports"+"_"+timestamp2+".html");
-            reporter.LoadConfig("C:/Users/dtdev/csharp/csharp/sampletest/Configs/extent-config.xml");
+            
+            //reporter = new ExtentV3HtmlReporter("C:/Users/dtdev/csharp/csharp/sampletest/Reports/ExtentReports"+"_"+timestamp2+".html");
+            //reporter.LoadConfig("C:/Users/dtdev/csharp/csharp/sampletest/Configs/extent-config.xml");
+            reporter = new ExtentV3HtmlReporter(ConfigurationManager.AppSettings["ReportsPath"]+"/"+ConfigurationManager.AppSettings["AppUnderTest"]+"_"+timestamp2+".html");
+            reporter.LoadConfig("./Configs/extent-config.xml");
+           
+           
             //below lines would have been needed in case we did not have seperate config file
             //reporter.Config.DocumentTitle = "Sample Automation Testing Report 1";
             //reporter.Config.ReportName = "Regression Testing Suite 1";
@@ -37,10 +43,11 @@ namespace ReportingLibrary
 
             //need to paramterize this below section as well
             extent.AttachReporter(reporter);
-            extent.AddSystemInfo("Application Under Test", "Sample App 1");
-            extent.AddSystemInfo("Environment", "QA");
+            extent.AddSystemInfo("App Under Test", ConfigurationManager.AppSettings["AppUnderTest"]);
+            extent.AddSystemInfo("Environment", ConfigurationManager.AppSettings["Environment"]);
             extent.AddSystemInfo("Machine", Environment.MachineName);
             extent.AddSystemInfo("OS", Environment.OSVersion.VersionString);
+            extent.AddSystemInfo("Browser",ConfigurationManager.AppSettings["BrowserName"]);
         }
         public void CreateTest(string testName)
         {

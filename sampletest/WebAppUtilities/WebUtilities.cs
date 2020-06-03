@@ -1,15 +1,39 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
+using OpenQA.Selenium.IE;
+using System;
+using System.Configuration;
 namespace sampletest.WebAppUtilities
 {
     public class WebUtilities
     {
         //put this below info in the config manager
-        IWebDriver driver = new ChromeDriver(@"C:\Users\dtdev\csharp\csharp\sampletest\Drivers"); //<-Add your path
+        private static IWebDriver driver;
+        //string DriverName = "IE";//make this configurable
+        String DriverName=ConfigurationManager.AppSettings["BrowserName"];//from app.config file
+        String DriverPath=ConfigurationManager.AppSettings["DriverPath"];
+        public IWebDriver SelectBrowserType()
+        {
+            switch (DriverName)
+            {
+                case "CHROME":
+                    driver = new ChromeDriver(@DriverPath); //<-Add your path
+                    //return driver;
+                    break;
 
+                case "IE":
+                    driver = new InternetExplorerDriver(@DriverPath); //<-Add your path
+                    //return driver;
+                    break;
+          }
+            return driver;
+
+
+        }
         public void LaunchApp(string url)
         {
+            SelectBrowserType();
             driver.Navigate().GoToUrl(url);//we need to parameterize this later
         }
         /**
