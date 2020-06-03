@@ -9,6 +9,7 @@
     To download -   https://dotnet.microsoft.com/download
     (Post installation - To verify enter in command line dotnet --vesion , output should be '3.1.101')
         
+    Please set the confugurations in app.config file    
     Command Line Execution (currently it executes all tests in the steps folder)
     How to clean >>>>  dotnet clean 
     How to build >>>>  dotnet build
@@ -16,6 +17,8 @@
     
     Want to write a new test??
         >> create a new feature file within the 'features' folder, create a corresponding step definition class in 'steps' folder & you have a new test ready .
+
+
 
 # Features built so far
     Rest Api Sample Test + Specflow
