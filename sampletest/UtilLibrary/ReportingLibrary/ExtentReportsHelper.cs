@@ -32,7 +32,7 @@ namespace ReportingLibrary
             //reporter = new ExtentV3HtmlReporter("C:/Users/dtdev/csharp/csharp/sampletest/Reports/ExtentReports"+"_"+timestamp2+".html");
             //reporter.LoadConfig("C:/Users/dtdev/csharp/csharp/sampletest/Configs/extent-config.xml");
             reporter = new ExtentV3HtmlReporter(ConfigurationManager.AppSettings["ReportsPath"]+"/"+ConfigurationManager.AppSettings["AppUnderTest"]+"_"+timestamp2+".html");
-            reporter.LoadConfig("./Configs/extent-config.xml");
+            reporter.LoadConfig("./Utilities/Configs/extent-config.xml");
            
            
             //below lines would have been needed in case we did not have seperate config file
