@@ -5,11 +5,6 @@ Feature: APItests
  So that reason
  
 Scenario: APItests
-  Given I know the api details
-  When I request get 
-  Then I get desired response
-
-Scenario: APItestsTwo
-  Given I know the api details2
-  When I request get2 
-  Then I get desired response2
+  Given the user know the api details
+  When the user requests GET 
+  Then the user should get desired response

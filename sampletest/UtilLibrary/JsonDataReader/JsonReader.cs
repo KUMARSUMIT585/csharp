@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 public class JsonReader
 {
     //need to paramterize this one
-    string jsonFilePath = "C:/Users/dtdev/csharp/csharp/sampletest/TestData/WebTestData1.json";
+    string jsonFilePath = "C:/Users/dtdev/csharp/csharp/sampletest/DataDictionaries/ER.json";
     /**Method to read test data records for a particular test data id
     */
 

@@ -21,7 +21,7 @@ namespace sampletest.steps.webtests
         [Given(@"the guest user knows the url details of Scottish Widows")]
         public void GivenPrecondition1()
         {
-            extent1.CreateTest("Sample Web App Test 1");
+            extent1.CreateTest("Validate launch of Scottish Widows Home Page");
             extent1.SetStepStatusPass("GIVEN the guest user knows the url details of Scottish Widows");
         }
 

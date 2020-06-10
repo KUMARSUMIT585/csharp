@@ -6,9 +6,8 @@
     
     {
         "TestDataID": "2",
-        "ExpectedPageTitle": "Scottish Widows | Pensions | Life insurance | Investments1",
-        "salary":"200000",
-        "address":"Edinburgh"
+        "ExpectedPageTitle": "Scottish Widows | Pensions | Life insurance | Investments1"
+        
     },
     {
         "TestDataID": "3",
