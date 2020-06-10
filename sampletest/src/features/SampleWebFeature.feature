@@ -5,6 +5,6 @@ Feature: Webtests
  So that reason
  
 Scenario: Webtests
- Given I know the url details
-  When I launch the web app in G Chrome 
-  Then I get launched web page
+ Given the guest user knows the url details of Scottish Widows
+  When the guest user launches the web app in a browser 
+  Then the guest user should be able to see the Scottish Widows Home Page

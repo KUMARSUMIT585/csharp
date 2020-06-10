@@ -32,8 +32,8 @@ namespace ReportingLibrary
             //reporter = new ExtentV3HtmlReporter("C:/Users/dtdev/csharp/csharp/sampletest/Reports/ExtentReports"+"_"+timestamp2+".html");
             //reporter.LoadConfig("C:/Users/dtdev/csharp/csharp/sampletest/Configs/extent-config.xml");
             reporter = new ExtentV3HtmlReporter(ConfigurationManager.AppSettings["ReportsPath"]+"/"+ConfigurationManager.AppSettings["AppUnderTest"]+"_"+timestamp2+".html");
-            reporter.LoadConfig("./Utilities/Configs/extent-config.xml");
-           
+            reporter.LoadConfig("C:/Users/dtdev/csharp/csharp/sampletest/Utilities/Configs/extent-config.xml");
+            //sampletest\Utilities\Configs\extent-config.xml
            
             //below lines would have been needed in case we did not have seperate config file
             //reporter.Config.DocumentTitle = "Sample Automation Testing Report 1";
@@ -53,6 +53,7 @@ namespace ReportingLibrary
         {
             test = extent.CreateTest(testName);
         }
+    
         public void SetStepStatusPass(string stepDescription)
         {
             test.Log(Status.Pass, stepDescription);

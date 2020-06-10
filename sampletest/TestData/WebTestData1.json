@@ -1,0 +1,18 @@
+[
+    {  
+        "TestDataID": "1",
+        "ExpectedPageTitle": "Scottish Widows | Pensions | Life insurance | Investments"
+    },
+    
+    {
+        "TestDataID": "2",
+        "ExpectedPageTitle": "Scottish Widows | Pensions | Life insurance | Investments1",
+        "salary":"200000",
+        "address":"Edinburgh"
+    },
+    {
+        "TestDataID": "3",
+        "ExpectedPageTitle": "Scottish Widows | Pensions | Life insurance | Investments1",
+        "ExpectedPageUrl": "Scottish Widows | Pensions | Life insurance | Investments1"
+    }
+]

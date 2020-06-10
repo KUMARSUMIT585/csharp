@@ -24,7 +24,8 @@
     Extent Reports
 
 # Dependencies 
-    chromedriver version will depedn on the chrome versio on local machine
+    chromedriver version will depend on the chrome version on local machine (Version 83.0.4103.61 (Official Build) (64-bit))
+    same is the case with IE browser (Version 11.1217)
 
 # Extensions To Be Installed in VS Code
     will update this section on consistent basis

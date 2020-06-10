@@ -52,6 +52,11 @@ namespace sampletest.WebAppUtilities
                 return false;
             }
         }
+        public string GetPageTitle()
+        {
+            return driver.Title;
+
+        }
 
 
     }

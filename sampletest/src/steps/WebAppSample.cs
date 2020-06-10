@@ -8,41 +8,49 @@ using ReportingLibrary;
 using sampletest.WebAppUtilities;
 using System.Configuration;
 
+
 namespace sampletest.steps.webtests
 {
     [Binding]
     public class WebAppSample
     {
-        ExtentReportsHelper extent1=new ExtentReportsHelper();
-        WebUtilities webutil=new WebUtilities();
-        
-        [Given(@"I know the url details")]
+        ExtentReportsHelper extent1 = new ExtentReportsHelper();
+        WebUtilities webutil = new WebUtilities();
+        JsonReader json = new JsonReader();//for test data reader
+
+        [Given(@"the guest user knows the url details of Scottish Widows")]
         public void GivenPrecondition1()
         {
             extent1.CreateTest("Sample Web App Test 1");
-            extent1.SetStepStatusPass("Given I know the url details");        }
+            extent1.SetStepStatusPass("GIVEN the guest user knows the url details of Scottish Widows");
+        }
 
-        [When(@"I launch the web app in G Chrome")]
+        [When(@"the guest user launches the web app in a browser")]
         public void WhenAction1()
         {
             webutil.LaunchApp(ConfigurationManager.AppSettings["BaseUrl"]);
-            extent1.SetStepStatusPass("When I launch the web app in G Chrome");  
+            extent1.SetStepStatusPass("WHEN the guest user launches the web app in a browser");
         }
 
-        [Then(@"I get launched web page")]
+        [Then(@"the guest user should be able to see the Scottish Widows Home Page")]
         public void ThenTestableOutcome1()
-        {
-            bool result1= webutil.ValidatePageTitle("SpecFlow - Behavior Driven Development for .NET");
-            if (result1==true)
+        {   //test data has to be parametersied 
+
+            //string expectedTitle="Scottish Widows | Pensions | Life insurance | Investments1";
+            //have to think something about test data record & steps mapping class
+            string expectedTitle = json.GetTestDataValue(1, "ExpectedPageTitle");
+            bool result1 = webutil.ValidatePageTitle(expectedTitle);
+            if (result1 == true)
             {
-                extent1.SetStepStatusPass("Then I get launched web page"); 
+                extent1.SetStepStatusPass("THEN the guest user should be able to see the Scottish Widows Home Page");
+                extent1.SetTestStatusPass();
             }
             else
             {
-                extent1.SetStepStatusFail("Then I get launched web page"); 
-                extent1.SetTestStatusFail("The actual page title is not same as the expected page title");
+                extent1.SetStepStatusFail("THEN the guest user should be able to see the Scottish Widows Home Page");
+                extent1.SetTestStatusFail("The actual page title: '" + webutil.GetPageTitle() + "' is not same as the expected page title:'" + expectedTitle + "' ");
             }
-            extent1.Close();            
+            extent1.Close();
 
         }
     }
